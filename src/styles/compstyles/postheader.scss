@@ -1,0 +1,41 @@
+@import '../global';
+
+.post-header{
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    #post-details{
+        font-family: $family-sans;
+        h1{
+            font-size: $sub-title + 1;
+        }
+        p#post-excerpt{
+            font-family: $family-serif;
+            font-size: $body;
+            font-weight: $font-reg;
+            color: $black;
+        }
+        p#post-date{
+            font-size: $body;
+        }
+
+        #dateandtags{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        ul.tags{
+            list-style: none;
+            padding-left: 0px;
+            display: flex;
+            li{
+                margin-left: 5px;
+            }
+        }
+    }
+}
+

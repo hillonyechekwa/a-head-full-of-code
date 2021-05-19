@@ -6,7 +6,7 @@ const HomeHeader = () => {
         <header className="home-header">
             <div className="home-h-wrapper">
                 <section id="logo-container">
-                    <h1>Logo</h1>
+                    <h1>Icon</h1>
                     <p>scroll down</p>
                 </section>
                 <section id="content-wrapper">

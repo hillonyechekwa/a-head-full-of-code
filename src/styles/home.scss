@@ -16,21 +16,6 @@
         margin-left: 500px;
         color: $secondary;
     }
-    .posts{
-        width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background-color: $primary;
-        .content{
-            font-size: $sub-title;
-            font-weight: $font-mid;
-            p{
-                font-family: $family-serif;
-                font-size: $body;
-                font-weight: $font-reg;
-            }
-        }
-    }
 }
 
 

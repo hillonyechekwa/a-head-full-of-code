@@ -1,9 +1,12 @@
 import React from 'react';
 import '../styles/posts.scss'
+import BlogCard from '../components/blogcard'
 
 const Posts = () => {
     return (
-        <h1>This page will have all the posts</h1>
+        <>
+           <BlogCard />
+        </>
     )
 }
 
