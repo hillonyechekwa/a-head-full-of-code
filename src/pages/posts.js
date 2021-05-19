@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/posts.scss'
 
 const Posts = () => {
     return (

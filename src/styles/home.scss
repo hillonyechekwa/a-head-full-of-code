@@ -1,0 +1,83 @@
+@import './global';
+
+
+.featured{
+    background-color: $primary;
+    padding: 15px;
+    font-family: $family-sans;
+
+    h1{
+        font-weight: $font-bold;
+        font-size: $title + 2;
+        text-align: center;
+    }
+    #posts-link{
+        font-size: $body;
+        margin-left: 500px;
+        color: $secondary;
+    }
+    .posts{
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $primary;
+        .content{
+            font-size: $sub-title;
+            font-weight: $font-mid;
+            p{
+                font-family: $family-serif;
+                font-size: $body;
+                font-weight: $font-reg;
+            }
+        }
+    }
+}
+
+
+
+.newsletter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $secondary;
+    padding: 20px;
+    h2{
+        font-size: $title - 1;
+        font-family: $family-sans;
+        color: $black;
+        font-weight: $font-mid
+    }
+    h2:nth-child(3n){
+        color: $primary;
+    }
+    small{
+        color: $accent;
+        font-weight: $font-mid;
+        font-size: $body;
+        font-family: $family-serif;
+    }
+}
+
+.newsletter form{
+    label{
+        font-family: $family-sans;
+    }
+    input{
+        width: 300px;
+        margin-left: 5px;
+        border: none;
+        background: none;
+        border-bottom: 3px;
+        border-bottom-style: solid;
+        margin-bottom: 30px;
+    }
+    button{
+        background: none;
+        border: none;
+        font-family: $family-sans;
+        color:$primary;
+        font-weight: $font-mid;
+        position: relative;
+        top: 10px;
+        left: 25%;
+    }
+}

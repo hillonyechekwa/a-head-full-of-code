@@ -1,0 +1,40 @@
+@import '../global';
+
+footer{
+    height: 450px;
+    background-color: $accent;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .author-bio{
+        font-family: $family-serif;
+        color: $black;
+        font-size: $body;
+    }
+    #copyr{
+        position: relative;
+        left: 80%;
+        font-family: $family-sans;
+        font-size: $sub-title;
+        font-weight: $font-mid;
+        span{
+            color: $secondary;
+        }
+    }
+    .links{
+        width: 100%;
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            font-family: $family-sans;
+            font-size: $title;
+            font-weight: $font-mid;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+

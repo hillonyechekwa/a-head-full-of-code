@@ -1,14 +1,15 @@
 import React from 'react'
+import '../../styles/compstyles/homeheader.scss'
 
 const HomeHeader = () => {
     return (
-        <Header>
-            <div>
-                <section className="logo-container">
+        <header className="home-header">
+            <div className="home-h-wrapper">
+                <section id="logo-container">
                     <h1>Logo</h1>
                     <p>scroll down</p>
                 </section>
-                <section>
+                <section id="content-wrapper">
                     <p>
                         Lorem ipsum dolor sit amet consectetur a
                         dipisicing elit. Ullam illo expedita itaque error placeat blanditiis commodi, aut, possimus cupiditate culpa est q
@@ -16,7 +17,7 @@ const HomeHeader = () => {
                     </p>
                 </section>
             </div>
-        </Header>
+        </header>
     )
 }
 

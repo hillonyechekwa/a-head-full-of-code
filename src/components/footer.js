@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/compstyles/footer.scss'
 
 const Footer = () => {
     return (
@@ -12,9 +13,7 @@ const Footer = () => {
                 </ul>
             </section>
             <section className="author-bio">
-                <div>
-                    Image
-                </div>
+                <img src="#" alt="bio-thumb" />
                 <p className="bio">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eum minus voluptate explicabo quam et voluptatum nihil reiciendis perspiciatis?
@@ -22,6 +21,7 @@ const Footer = () => {
                     totam dicta placeat libero, eaque animi quidem molestiae porro assumenda natus.
                 </p>
             </section>
+            <p id="copyr">&copy;2021|<span>aheadfullofcode</span></p>
         </footer>
     )
 }

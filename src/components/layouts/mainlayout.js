@@ -5,10 +5,10 @@ import Footer from '../footer'
 
 const MainLayout = ({children}) => {
     return (
-        <div>
+        <div className="outer-wrapper">
             <Banner />
             <Navigation />
-            <div>
+            <div className="child-wrapper">
                 {children}
             </div>
             <Footer />

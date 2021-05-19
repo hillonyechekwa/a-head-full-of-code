@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Josefin+Slab&display=swap');
+
+//fonts
+$family-sans: 'Josefin Sans', sans-serif;
+$family-serif: 'Josefin Slab', serif;
+$font-bold: 700;
+$font-mid: 500;
+$font-reg: 400;
+//colors
+$black: hsl(120, 100%, 1%);
+$primary: hsl(178, 79%, 78%);
+$accent: hsl(151, 100%, 93%);
+$secondary: hsl(253, 51%, 39%);
+//sizes
+$title: 3rem; //could be more
+$sub-title: 1.2rem;
+$body: .9rem;
