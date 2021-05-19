@@ -3,7 +3,11 @@ import React from 'react'
 const Navigation = () => {
     return (
         <nav>
-            Tbis is the navigation component
+            <ul>
+                <li>Home</li>
+                <li>Posts</li>
+                <li>About</li>
+            </ul>
         </nav>
     )
 }

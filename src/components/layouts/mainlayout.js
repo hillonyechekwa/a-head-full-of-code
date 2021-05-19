@@ -1,8 +1,18 @@
 import React from 'react';
+import Banner from '../logobanner'
+import Navigation from '../navigation'
+import Footer from '../footer'
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
     return (
-        <h1>This is the main layout</h1>
+        <div>
+            <Banner />
+            <Navigation />
+            <div>
+                {children}
+            </div>
+            <Footer />
+        </div>
     )
 }
 
