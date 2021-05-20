@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-graphcms": "^2.5.2",
     "gatsby-transformer-sharp": "^3.5.0",
+    "gsap": "^3.6.1",
     "postcss": "^8.2.6",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.1",
