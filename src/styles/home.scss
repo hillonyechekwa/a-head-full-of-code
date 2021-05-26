@@ -6,10 +6,16 @@
     padding: 15px;
     font-family: $family-sans;
 
-    h1{
-        font-weight: $font-bold;
-        font-size: $title + 2;
-        text-align: center;
+    #featured-text{
+        font-family: $family-sans;
+        #text-wrapper{
+            transform: matrix(1, 0 , 0, 1, .05, 10);
+            tspan{
+                font-size: $title + 5;
+                font-weight: $font-bold;
+                color: $black;
+            }
+        }
     }
     #posts-link{
         font-size: $body;

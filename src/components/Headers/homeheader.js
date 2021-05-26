@@ -1,13 +1,15 @@
 import React from 'react'
 import '../../styles/compstyles/homeheader.scss'
+import Avatar from '../vectors/Avatar'
+import Arrow from '../vectors/Arrow'
 
 const HomeHeader = () => {
     return (
         <header className="home-header">
             <div className="home-h-wrapper">
                 <section id="logo-container">
-                    <h1>Icon</h1>
-                    <p>scroll down</p>
+                    <Avatar /> 
+                    <button id="scroll-down"><Arrow /></button>
                 </section>
                 <section id="content-wrapper">
                     <p>

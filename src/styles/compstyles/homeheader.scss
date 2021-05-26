@@ -3,7 +3,7 @@
 
 .home-header{
     width: 100%;
-    height: 250px;
+    height: 400px;
     display: flex;
     place-items: center;
     .home-h-wrapper{
@@ -24,6 +24,17 @@
             font-weight: $font-reg;
             text-align: left;
             margin: auto;
+        }
+        #logo-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #scroll-down{
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
         }
     }
 }

@@ -8,7 +8,12 @@ const Index = () => {
     <>
     <HomeHeader />
     <section className="featured">
-        <h1>Featured Posts</h1>  {/*TODO: Make into SVG */}
+        <svg id="featured-text" viewBox="0 0 1000 200">
+          <text id="text-wrapper">
+            <tspan x="50" y="100">Featured</tspan>
+            <tspan x="650" y="100">Posts</tspan>
+          </text>
+        </svg>
         <Card /> 
         <p id="posts-link">Check out all the posts here</p>
     </section>
