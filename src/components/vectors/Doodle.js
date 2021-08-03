@@ -1,9 +1,10 @@
 import React from 'react'
+import "../../styles/compstyles/doodle.scss"
 
 
 const Doodles = () => {
     return (
-        <svg width="544" height="431" viewBox="0 0 544 431" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="doodles" viewBox="0 0 544 431" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Open Doodles">
                 <g id="Illustrations/messy">
                     <g id="Accent">

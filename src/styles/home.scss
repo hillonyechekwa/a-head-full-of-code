@@ -2,6 +2,7 @@
 
 
 .featured{
+    position: relative;
     background-color: $primary;
     padding: 15px;
     font-family: $family-sans;
@@ -19,8 +20,10 @@
     }
     #posts-link{
         font-size: $body;
-        margin-left: 500px;
         color: $secondary;
+        position: absolute;
+        top: 90%;
+        left: 70%;
     }
 }
 
@@ -29,6 +32,7 @@
 .newsletter{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     background-color: $secondary;
     padding: 20px;
     h2{

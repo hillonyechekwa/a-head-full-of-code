@@ -2,12 +2,14 @@ import React from 'react';
 import HomeHeader from '../components/Headers/homeheader'
 import '../styles/home.scss';
 import Card from '../components/card'
+import Doodle from '../components/vectors/Doodle'
 
 const Index = () => {
   return (
     <>
     <HomeHeader />
-    <section className="featured">
+      <section className="featured">
+        {/* TODO ADD GRID LATER */}
         <svg id="featured-text" viewBox="0 0 1000 200">
           <text id="text-wrapper">
             <tspan x="50" y="100">Featured</tspan>
@@ -38,7 +40,7 @@ const Index = () => {
           <button type="submit">Send</button>
           </form>
         </div>
-        <img src="#" alt="section-illustration" />
+        <Doodle />
       </section>
    </>
   )
