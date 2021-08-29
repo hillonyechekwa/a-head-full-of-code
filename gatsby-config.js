@@ -27,11 +27,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-      {
-      resolve: `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 }), require(`autoprefixer`)],
-      },
+        name: `files`,
+        path: `${__dirname}/src/`,
+      }
     },
     {
       resolve: `gatsby-plugin-layout`,
@@ -39,18 +40,17 @@ module.exports = {
         component: require.resolve(`./src/components/layouts/mainlayout.js`)
       }
     },
+    // {
+    //   resolve: 'gatsby-source-graphcms',
+    //   options: {
+    //     endpoint: process.env.GRAPHCMS_ENDPOINT,
+    //   },
+    // },
     {
-      resolve: `gatsby-source-graphcms`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-      }
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 }), require(`autoprefixer`)],
+      },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `files`,
-        path: `${__dirname}/src/`,
-      }
-    }
   ],
 }

@@ -1,17 +1,8 @@
 import React from 'react';
-import Banner from '../logobanner'
-import Navigation from '../navigation'
-import Footer from '../footer'
 
-const MainLayout = ({children}) => {
+const MainLayout = () => {
     return (
-        <div className="outer-wrapper">
-            <Banner />
-            <Navigation />
-            <div className="child-wrapper">
-                {children}
-            </div>
-            <Footer />
+        <div className="">
         </div>
     )
 }
