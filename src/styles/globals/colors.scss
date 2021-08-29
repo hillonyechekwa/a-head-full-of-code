@@ -1,0 +1,24 @@
+:root{
+    --primary: hsl(0, 79%, 72%);
+    --primary-dark: darken(hsl(0, 79%, 72%), 20%);
+    --secondary: hsl(275, 100%, 25%);
+    --secondary-light: lighten(hsl(275, 100%, 25%), 20%);
+    --white-surface: hsl(39, 85%, 95%);
+    --white-bg: hsl(39, 85%, 95%);
+    --light-text1: hsl(0, 7%, 3%);
+    --light-text2: hsl(180, 17%, 23%);
+    --black-bg: hsl(0, 7%, 3%);
+    --grad-bg-start: hsl(275, 94%, 36%);
+    --grad-bg-end: hsl(180, 100%, 50%);
+}
+
+//TODO: figure out 
+//dark bg
+//dark text1&2
+//dark surface
+//dark gradients
+
+
+h2{
+    color:darkslategrey
+}
