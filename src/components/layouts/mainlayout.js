@@ -1,8 +1,11 @@
 import React from 'react';
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
     return (
         <div className="">
+            <main>
+                {children}
+            </main>
         </div>
     )
 }
