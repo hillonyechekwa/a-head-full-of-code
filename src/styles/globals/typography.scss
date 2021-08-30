@@ -1,0 +1,62 @@
+h1,h2,h3{
+    margin-top: 0;
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+}
+
+h1{
+    font-family: --font-josefin;
+    font-size: 96px;
+    font-weight: 300;
+}
+
+h2{
+    font-family: --font-josefin;
+    font-size: 72px;
+    font-weight: 400;
+}
+
+h3{
+    font-family: --font-josefin;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h4.sub1{
+    font-family: --font-josefin;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h4.sub2{
+    font-family: --font-josefin;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p.text1{
+    font-family: --font-josefin;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+p.text2{
+    font-family: --font-josefin;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p.button-txt{
+    font-family: --font-josefin;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+small{
+    font-family: --font-family;
+    font-size: 13px;
+    font-weight: 400;
+}

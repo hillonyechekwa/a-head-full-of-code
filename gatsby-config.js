@@ -52,5 +52,13 @@ module.exports = {
         postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 }), require(`autoprefixer`)],
       },
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ['Josefin Sans']
+        }
+      }
+    }
   ],
 }
