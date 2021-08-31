@@ -6,11 +6,11 @@
     --secondary-light: hsl(185, 100%, 88%);
     --white-surface: hsl(6, 100%, 94%);
     --white-bg: hsl(41, 85%, 95%);
-    --light-text1: hsl(0, 7%, 3%);
+    --light-text1: hsl(288, 13%, 30%);
     --light-text2: hsl(210, 13%, 53%);
     --black-bg: hsl(0, 7%, 3%);
-    --grad-bg-start: hsl(333, 64%, 65%);
-    --grad-bg-end: hsl(290, 40%, 58%);
+    --grad-one: linear-gradient(to right,hsl(0, 79%, 72%), hsl(339, 48%, 62%));
+    --grad-two: linear-gradient(to right,hsl(0, 79%, 72%), hsl(290, 40%, 58%));
 }
 
 //TODO: figure out 

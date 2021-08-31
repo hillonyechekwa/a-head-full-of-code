@@ -1,9 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Card from '../components/card'
+import Card from "../components/card"
 
 const Header = () => {
-    const herodata = useStaticQuery(graphql`
+  const herodata = useStaticQuery(graphql`
     query MyQuery {
       site {
         siteMetadata {
@@ -14,19 +14,24 @@ const Header = () => {
       }
     }
   `)
-    
-    const {title, description, tags} = herodata.site.siteMetadata
+
+  const { title, description, tags } = herodata.site.siteMetadata
 
   return (
     <header className="hero">
-          <h1>{title}</h1>
-          <p className="text1">{description}</p>
-          {tags.map(tag => (
-              <Card key={tag} content={tag} className="card-small card-small--hoz"/>
-          ))}
+      <h1>{title}</h1>
+      <p className="text1">{description}</p>
+      <div className="tags-container">
+        {tags.map(tag => (
+          <Card
+            key={tag}
+            content={tag}
+            className="card-small card-small--hoz"
+          />
+        ))}
+      </div>
     </header>
   )
 }
 
-
-export default Header 
+export default Header

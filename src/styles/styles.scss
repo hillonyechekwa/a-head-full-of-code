@@ -1,2 +1,12 @@
 @use 'globals';
 @use 'components';
+
+
+
+
+.tags-container{
+    display: flex;
+    position: relative;
+    top: 30%;
+    justify-content: space-evenly;
+}

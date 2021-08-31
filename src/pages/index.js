@@ -5,6 +5,10 @@ import Header from '../components/header'
 const Index = () => {
   return (
     <>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>AHOC</title>
+        </Helmet>
     <Header />
    </>
   )

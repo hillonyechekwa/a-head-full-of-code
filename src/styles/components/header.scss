@@ -1,6 +1,8 @@
 .hero{
     width: 66.2%;
     height: 430px;
-    background-color: linear-gradient(to right, coral,purple);
+    background: var(--grad-one);
     border-radius: 5px;
+    position: relative;
+    padding-top: 20px;
 }

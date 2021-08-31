@@ -5,7 +5,7 @@ import Logo from './logo'
 
 const Navigation = () => {
     return (
-        <nav className="">
+        <nav className="nav">
             <Logo/>
             <ul>
                 <li>
