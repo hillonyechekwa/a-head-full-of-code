@@ -1,22 +1,24 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
+import Logo from './logo'
 
 
 const Navigation = () => {
     return (
         <nav className="">
+            <Logo/>
             <ul>
                 <li>
-                    <Link href="./">Home</Link>
+                    <Link to="./">Home</Link>
                 </li>
                 <li>
-                    <Link href="/posts">Posts</Link>
+                    <Link to="/posts">Posts</Link>
                 </li>
                 <li>
-                    <Link href="/About">About</Link>
+                    <Link to="/About">About</Link>
                 </li>
                 <li>
-                    <Link href="./coffee">Buy Me A Coffee</Link>
+                    <Link to="./coffee">Buy Me A Coffee</Link>
                 </li>
             </ul>
         </nav>

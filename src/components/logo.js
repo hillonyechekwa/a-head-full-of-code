@@ -1,19 +1,21 @@
 import React from 'react';
+import '../styles/styles.scss'
+
 
 
 const Logo = () => (
-    <svg viewBox="0 0 500 300">
+    <svg viewBox="0 0 200 200" id="logo">
         <text>
-            <tspan x="10" y="150">
+            <tspan x="10" y="100">
                 A
             </tspan>
-            <tspan x="20" y="150">
+            <tspan x="25" y="100">
                 H
             </tspan>
-            <tspan x="40" y="150">
+            <tspan x="40" y="100">
                 O
             </tspan>
-            <tspan x="80" y="150">
+            <tspan x="55" y="100">
                 C
             </tspan>
         </text>

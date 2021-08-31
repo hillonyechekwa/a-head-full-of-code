@@ -11,14 +11,15 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `A Head Full Of Code`,
+    title: `A Headfull Of Code`,
     description: `A Web Development blog`,
     editor: `Hill Onyechekwa`,
     socials: {
       twitter: `https://twitter.com/thegridsmith`,
       codepen: `https://codepen.com/hillonyechekwa`,
       github: `https://github.com/hillonyechekwa`,
-    }
+    },
+    tags: ['jamstack', 'frontend', 'javascript', 'serverless']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
