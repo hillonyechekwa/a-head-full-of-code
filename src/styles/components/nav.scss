@@ -12,6 +12,15 @@
         align-items: center;
         li{
             list-style: none;
+            a{
+                color: var(--light-text1);
+                &:hover{
+                    color: var(--primary-dark);
+                }
+                &:visited{
+                    color: var(--secondary);
+                }
+            }
         }
     }
 }
