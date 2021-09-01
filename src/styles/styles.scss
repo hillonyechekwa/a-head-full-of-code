@@ -7,6 +7,33 @@
 .tags-container{
     display: flex;
     position: relative;
-    top: 30%;
+    top: 0;
+    left: 0;
     justify-content: space-evenly;
+}
+
+.latest-heading{
+    color: var(--primary);
+}
+
+//TODO find out how to add linear gradient to text.
+a.home-card-cont{
+    display: flex;
+    color: var(--primary-dark);
+    h4{
+        text-align: left;
+        // inline-size: 300px;
+    }
+}
+
+.card-home-pg{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    z-index: 2;
+    box-shadow: 0px 3px 6px 4px rgba(70, 86, 118, 0.25);
+    transition: .3s ease-out .6s;
+    // &:hover{
+    //     box-shadow: 3px 6px 4px rgba(70, 86, 118, 0.25);
+    // }
 }

@@ -2,25 +2,27 @@ import React from 'react';
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Card from '../components/card'
+import HomeCardContent from '../components/HomeCardContent';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Link } from 'gatsby'
+import ImageOne from '../../public/assets/keyboard.jpg'
+import ImageTwo from '../../static/assets/architecture.jpg'
+// import '../styles/styles.scss'
 
-const Index = ({ HomeCardContent }) => {
-  
+const Index = () => {
+  // FIXME:fix image import from static files
   const dummyData = [{
     id: "dd1",
-    titile: "Netlify Lambda Functions In Gatsby",
+    title: "Netlify Lambda Functions In Gatsby",
     slug: "netlify-lambda-functions-in-gatsby",
-    image: "static/assets/keyboard.jpg"
+    image: "../../public/assets/keyboard.jpg"
   },
   {
     id: "dd2",
-    titile: "The JAMStack Architechture",
+    title: "The JAMStack Architechture",
     slug: "the-jamstack-architechture", 
-    image: "static/assets/architecture.jpg"
+    image: "../../static/assets/architecture.jpg"
   }]
 
-  console.log(dummyData)
   return (
     <>
       <Helmet>
@@ -28,30 +30,9 @@ const Index = ({ HomeCardContent }) => {
           <title>AHOC</title>
         </Helmet>
       <Header />
-      <Card className="card card-home-pg">
-        <HomeCardContent/>
-      </Card>
+      <Card className="card card-home-pg" content={<HomeCardContent cardData={dummyData}/>}/>
    </>
   )
-}
-
-//FIX:move this into it's own component
-export function HomeCardContent({dummyData}) {
-  <>
-    <h3>Latest Posts</h3>
-    {
-      dummyData.map(data => {
-        return (
-          <Link key={data.id} to={data.slug}>
-            <img src={data.image} alt={data.image}/>
-            <h4 className="sub1">
-              {data.title}
-            </h4>
-          </Link>
-        )
-      })
-    }
-  </>
 }
 
 export default Index
