@@ -1,6 +1,10 @@
 #avatar{
     width: 600px;
-    height: 1000px;
-    position: absolute;
-    top: -25rem;
+    height: 700px;
+    position: relative;
+    top: -20rem;
+    #mask,#main-image{
+        width: 200px;
+        height: 400px;
+    }
 }
