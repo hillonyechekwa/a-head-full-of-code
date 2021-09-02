@@ -6,6 +6,7 @@ import HomeCardContent from '../components/HomeCardContent';
 import { useStaticQuery, graphql } from 'gatsby';
 import ImageOne from '../../public/assets/keyboard.jpg'
 import ImageTwo from '../../static/assets/architecture.jpg'
+import Avatar from '../components/svgs/avatar'
 // import '../styles/styles.scss'
 
 const Index = () => {
@@ -30,6 +31,7 @@ const Index = () => {
         </Helmet>
       <Header />
       <Card className="card card-home-pg" content={<HomeCardContent cardData={dummyData}/>}/>
+      <Card className="card-info bottom-info" content={<Avatar/> } />
    </>
   )
 }

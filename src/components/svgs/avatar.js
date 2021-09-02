@@ -2,7 +2,7 @@ import * as React from "react"
 
 function Avatar(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 990" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" id="avatar" viewBox="0 0 1000 990" {...props}>
       <mask id="mask">
         <path
           d="M1000 0H0v718.31h179.2c38.38 142.38 167.45 247.1 320.8 247.1s282.42-104.72 320.8-247.1H1000z"

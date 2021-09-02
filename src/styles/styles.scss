@@ -30,6 +30,7 @@ a.home-card-cont{
         left: 20px;
         cursor: pointer;
         // inline-size: 300px;
+        transition: .3s ease-in .6s;
         &:hover{
             text-decoration: underline wavy;
             text-decoration-color: var(--secondary);
@@ -54,3 +55,13 @@ a.home-card-cont img{
     //     box-shadow: 3px 6px 4px rgba(70, 86, 118, 0.25);
     // }
 }
+
+
+
+.bottom-info{
+    position: relative;
+    top: 35rem;
+    left: 3%;
+}
+
+
