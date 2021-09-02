@@ -26,3 +26,7 @@ use SVGR
 
 digital ocean git
 https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source
+
+
+
+modals 

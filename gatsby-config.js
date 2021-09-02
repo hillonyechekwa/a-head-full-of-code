@@ -49,12 +49,12 @@ module.exports = {
         component: require.resolve(`./src/components/layouts/mainlayout.js`)
       }
     },
-    // {
-    //   resolve: 'gatsby-source-graphcms',
-    //   options: {
-    //     endpoint: process.env.GRAPHCMS_ENDPOINT,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-graphcms',
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+      },
+    },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

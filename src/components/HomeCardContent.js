@@ -4,16 +4,17 @@ import { Link } from 'gatsby';
 
 
 export default function HomeCardContent({ cardData }) {
-  console.log('cardData', cardData)
+  const { id, title, slug, coverImage } = cardData
+  console.log('card data', cardData)
   return (  
   <>
     <h3 className="latest-heading">Latest Posts</h3>
-    {cardData.map(data => {
+    {cardData.map(({ id, title, slug, coverImage }) => {
       return (
-        <Link className="home-card-cont" key={data.id} to={data.slug}>
-          <img src={data.image} alt={data.image} />
+        <Link className="home-card-cont" key={id} to={slug}>
+          <img src={coverImage.url} alt={coverImage.fileName} />
           <h4 className="sub1">
-            {data.title}
+            {title}
           </h4>
         </Link>
       );

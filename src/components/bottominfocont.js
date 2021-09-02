@@ -16,7 +16,7 @@ const BottomInfoCont = () => {
     <div className="content-wrap">
       <Avatar />
       <div>
-        <h2>Say Hello 👋🏾</h2>
+        <h2>Say Hello <span role="img" aria-labelledby="dark waving hand">👋🏾</span></h2>
         <p className="body1">
           if you have conversations on certain topics to converse about or you
           just want to see my projects click any of the links to my other
