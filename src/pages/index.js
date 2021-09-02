@@ -9,18 +9,17 @@ import ImageTwo from '../../static/assets/architecture.jpg'
 // import '../styles/styles.scss'
 
 const Index = () => {
-  // FIXME:fix image import from static files
   const dummyData = [{
     id: "dd1",
     title: "Netlify Lambda Functions In Gatsby",
     slug: "netlify-lambda-functions-in-gatsby",
-    image: "../../public/assets/keyboard.jpg"
+    image: `../../assets/keyboard.jpg`
   },
   {
     id: "dd2",
     title: "The JAMStack Architechture",
     slug: "the-jamstack-architechture", 
-    image: "../../static/assets/architecture.jpg"
+    image: `../../assets/architecture.jpg`
   }]
 
   return (
