@@ -32,17 +32,17 @@ a.home-card-cont{
         // inline-size: 300px;
         transition: .3s ease-in .6s;
         &:hover{
-            text-decoration: underline wavy;
+            text-decoration:underline dotted;
             text-decoration-color: var(--secondary);
             text-decoration-thickness: 3px;
         }
     }
 }
 
-a.home-card-cont img{
-    width: 300px;
-    height: 200px;
-}
+// a.home-card-cont img{
+//     width: 300px;
+//     height: 200px;
+// }
 
 .card-home-pg{
     position: absolute;

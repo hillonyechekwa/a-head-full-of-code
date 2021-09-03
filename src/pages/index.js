@@ -18,28 +18,13 @@ const Index = () => {
           slug
           title
           coverImage {
-            url
+            gatsbyImageData(width: 300, height: 200, layout: FULL_WIDTH)
             fileName
           }
         }
       }
     }
   `)
-
-  // const dummyData = [
-  //   {
-  //     id: "dd1",
-  //     title: "Netlify Lambda Functions In Gatsby",
-  //     slug: "netlify-lambda-functions-in-gatsby",
-  //     image: `../../assets/keyboard.jpg`,
-  //   },
-  //   {
-  //     id: "dd2",
-  //     title: "The JAMStack Architechture",
-  //     slug: "the-jamstack-architechture",
-  //     image: `../../assets/architecture.jpg`,
-  //   },
-  // ]
 
   const postData = data.allGraphCmsPost.nodes
 

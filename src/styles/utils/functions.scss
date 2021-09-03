@@ -1,4 +1,3 @@
 @function rem($pixels, $context:16){
-    //TODO: fix math function to divide
     @return math.div($pixels, $context) * 1rem;
 }
