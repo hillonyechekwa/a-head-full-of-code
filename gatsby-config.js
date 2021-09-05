@@ -11,14 +11,15 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `A Head Full Of Code`,
+    title: `A Headfull Of Code`,
     description: `A Web Development blog`,
     editor: `Hill Onyechekwa`,
     socials: {
       twitter: `https://twitter.com/thegridsmith`,
       codepen: `https://codepen.com/hillonyechekwa`,
       github: `https://github.com/hillonyechekwa`,
-    }
+    },
+    tags: ['jamstack', 'frontend', 'javascript', 'serverless']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,11 +28,20 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-      {
-      resolve: `gatsby-plugin-postcss`,
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-source-filesystem`,
       options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 }), require(`autoprefixer`)],
-      },
+        name: `files`,
+        path: `${__dirname}/src/`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/assets`,
+      }
     },
     {
       resolve: `gatsby-plugin-layout`,
@@ -40,16 +50,23 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-graphcms`,
+      resolve: 'gatsby-source-graphcms',
       options: {
         endpoint: process.env.GRAPHCMS_ENDPOINT,
-      }
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        name: `files`,
-        path: `${__dirname}/src/`,
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 }), require(`autoprefixer`)],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ['Josefin Sans']
+        }
       }
     }
   ],

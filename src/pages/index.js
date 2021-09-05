@@ -1,51 +1,47 @@
-import React from 'react';
-import HomeHeader from '../components/Headers/homeheader'
-import '../styles/home.scss';
-import Card from '../components/card'
-import Doodle from '../components/vectors/Doodle'
+import React from "react"
+import Helmet from "react-helmet"
+import Header from "../components/header"
+import Card from "../components/card"
+import HomeCardContent from "../components/HomeCardContent"
+import { useStaticQuery, graphql } from "gatsby"
+//import ImageOne from "../../public/assets/keyboard.jpg"
+//import ImageTwo from "../../static/assets/architecture.jpg"
+import BottomInfoCont from "../components/bottominfocont"
+// import '../styles/styles.scss'
 
 const Index = () => {
+  const data = useStaticQuery(graphql`
+    query PageQuery {
+      allGraphCmsPost(limit: 2) {
+        nodes {
+          id
+          slug
+          title
+          coverImage {
+            url
+          }
+        }
+      }
+    }
+  `)
+
+  const postData = data.allGraphCmsPost.nodes
+
+  console.log(postData)
   return (
     <>
-    <HomeHeader />
-      <section className="featured">
-        {/* TODO ADD GRID LATER */}
-        <svg id="featured-text" viewBox="0 0 1000 200">
-          <text id="text-wrapper">
-            <tspan x="50" y="100">Featured</tspan>
-            <tspan x="650" y="100">Posts</tspan>
-          </text>
-        </svg>
-        <Card /> 
-        <p id="posts-link">Check out all the posts here</p>
-    </section>
-      <section className="newsletter">
-        <div>
-        <h2>Hey</h2>
-        <small>want to keep up with new posts?</small>
-        <h2>Sign Up for my newsletter</h2>
-        <form>
-          <div className="form-control">
-              <label hmtlFor="name">
-                Name
-              <input type="text" name="name" id="name" />
-            </label>
-         </div>
-        <div className="form-control">
-              <label htmlFor="email">
-                Email
-            <input type="email" name="email" id="email" />
-          </label>
-        </div>
-          <button type="submit">Send</button>
-          </form>
-        </div>
-        <Doodle />
-      </section>
-   </>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>AHOC</title>
+      </Helmet>
+      <Header />
+      <Card
+        className="card card-home-pg"
+        content={<HomeCardContent cardData={postData} />}
+      />
+      <Card className="card-info bottom-info" content={<BottomInfoCont />} />
+    </>
   )
 }
 
-
 export default Index
-

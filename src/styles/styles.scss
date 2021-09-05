@@ -1,0 +1,89 @@
+@use 'globals';
+@use 'components';
+
+
+
+
+.tags-container{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: space-evenly;
+}
+
+.latest-heading{
+    color: var(--primary);
+}
+
+//TODO find out how to add linear gradient to text.
+a.home-card-cont{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: var(--primary-dark);
+    cursor: none;
+    h4{
+        text-align: left;
+        position: absolute;
+        left: 20px;
+        cursor: pointer;
+        // inline-size: 300px;
+        transition: .3s ease-in .6s;
+        &:hover{
+            text-decoration:underline dotted;
+            text-decoration-color: var(--secondary);
+            text-decoration-thickness: 3px;
+        }
+    }
+}
+
+// a.home-card-cont img{
+//     width: 300px;
+//     height: 200px;
+// }
+
+.card-home-pg{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    z-index: 2;
+    box-shadow: 0px 3px 6px 4px rgba(70, 86, 118, 0.25);
+    transition: .3s ease-out .6s;
+    // &:hover{
+    //     box-shadow: 3px 6px 4px rgba(70, 86, 118, 0.25);
+    // }
+}
+
+
+
+.bottom-info{
+    position: relative;
+    top: 35rem;
+    left: 3%;
+    padding: 10px;
+    .content-wrap{
+        display: flex;
+        h2{
+            color: var(--primary-dark);
+        }
+        ul{
+            list-style: none;
+            position: relative;
+            top: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            li a{
+                color: var(--light-text1);
+                transition: all .2s linear .5s;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+
+
