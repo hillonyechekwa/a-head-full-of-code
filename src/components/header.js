@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Card from "../components/card"
+import { Link } from 'gatsby';
 
 const Header = () => {
   const herodata = useStaticQuery(graphql`

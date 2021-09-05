@@ -18,8 +18,7 @@ const Index = () => {
           slug
           title
           coverImage {
-            gatsbyImageData(width: 300, height: 200, layout: FULL_WIDTH)
-            fileName
+            url
           }
         }
       }
