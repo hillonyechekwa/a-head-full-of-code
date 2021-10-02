@@ -1,19 +1,29 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
-import Logo from "./logo"
+
 
 const Navigation = () => {
+
+  const [navbar, setNavbar] = useState(false)
+
+  useEffect(() => {
+    const changeBgOnScroll = () => {
+      if (window.scrollY >= 80) {
+        setNavbar(true)
+      } else {
+        setNavbar(false)
+      }
+    }
+
+    window.addEventListener('scroll', changeBgOnScroll)
+  },[navbar])
+
+
   return (
     <nav className="nav">
-      <Link to="/">
-        <Logo />
-      </Link>
       <ul>
         <li>
           <Link to="./">Home</Link>
-        </li>
-        <li>
-          <Link to="/posts">Posts</Link>
         </li>
         <li>
           <Link to="/About">About</Link>

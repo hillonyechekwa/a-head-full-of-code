@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
 
 
-const Card = ({content, className}) => {
+const Card = ({ content }) => {
+    // add logic to set state to color prop passed down into the component
+    console.log('content', content)
     return (
-        <div className={`${className}`} role="card">
-            {content}
-        </div>
+        <section className="card">
+            {/* <Link to={`/post/${content.slug}`}> */}
+                <h3>{content.title}</h3>
+                <p>{content.excerpt}</p>
+            {/* </Link> */}
+        </section>
     )
 }
 

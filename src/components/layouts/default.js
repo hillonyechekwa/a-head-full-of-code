@@ -1,9 +1,10 @@
 import React from 'react';
 import Nav from '../navigation'
+import '../../styles/index.scss'
 
-const MainLayout = ({children}) => {
+const Default = ({children}) => {
     return (
-        <div className="">
+        <div className="layout-wrapper">
             <Nav/>
             <main>
                 {children}
@@ -12,5 +13,5 @@ const MainLayout = ({children}) => {
     )
 }
 
-export default MainLayout;
+export default Default;
 

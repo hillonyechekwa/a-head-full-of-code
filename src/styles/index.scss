@@ -1,0 +1,47 @@
+@use 'globals';
+@use 'components';
+
+
+
+.blog-card--wrapper{
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 250px;
+    h2{
+        color: var(--primary-dark);
+    }
+}
+
+
+
+.bottom-info{
+    position: relative;
+    top: 35rem;
+    left: 3%;
+    padding: 10px;
+    .content-wrap{
+        display: flex;
+        h2{
+            color: var(--primary-dark);
+        }
+        ul{
+            list-style: none;
+            position: relative;
+            top: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            li a{
+                color: var(--light-text1);
+                transition: all .2s linear .5s;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+
+

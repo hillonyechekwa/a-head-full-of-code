@@ -1,5 +1,5 @@
 import React from "react"
-import Avatar from "./svgs/avatar"
+import Avatar from "../svgs/avatar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import {
@@ -11,9 +11,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import ReactTooltip from "react-tooltip"
 
-const BottomInfoCont = () => {
+const ContentInfo = () => {
   return (
-    <div className="content-wrap">
+    <div className="info-wrap">
       <Avatar />
       <div>
         <h2>Say Hello <span role="img" aria-labelledby="dark waving hand">👋🏾</span></h2>
@@ -69,4 +69,4 @@ const BottomInfoCont = () => {
   )
 }
 
-export default BottomInfoCont
+export default ContentInfo;
