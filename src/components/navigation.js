@@ -7,6 +7,7 @@ const Navigation = () => {
   const [navbar, setNavbar] = useState(false)
 
   useEffect(() => {
+    //FIXME: make this logic make sense it's trash rn
     const changeBgOnScroll = () => {
       if (window.scrollY >= 80) {
         setNavbar(true)
@@ -19,17 +20,19 @@ const Navigation = () => {
   },[navbar])
 
 
+//TODO: add a shadow at the bottom of the navbar when the scroll offset function kicks in. 
+
   return (
     <nav className="nav">
       <ul>
         <li>
-          <Link to="./">Home</Link>
+          <Link className="nav-links" to="/">Home</Link>
         </li>
         <li>
-          <Link to="/About">About</Link>
+          <Link className="nav-links" to="/About">About</Link>
         </li>
         <li>
-          <Link to="./coffee">Buy Me A Coffee</Link>
+          <a className="nav-links" href="https://buymeacoffee.com/blackchocoder">Buy Me A Coffee</a>
         </li>
       </ul>
     </nav>

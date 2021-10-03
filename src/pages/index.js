@@ -1,43 +1,41 @@
 import React from "react"
 import Header from "../components/header"
 import Card from "../components/card"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import ContentInfo from "../components/contentinfo"
 
-const Index = () => {
-  const data = useStaticQuery(graphql`
-    query blogQuery {
-      allGraphCmsPost {
-        edges {
-          node {
-            id
-            title
-            tags
-            slug
-            excerpt
-          }
-        }
-      }
-    }
-
-  `)
-
-  const blogData = data.allGraphCmsPost.edges
+const Index = ({data}) => {
  
   return (
     <>
       <Header />
       <section className="blog-card--wrapper">
         <h2>Latest Posts</h2>
-        {blogData.map(({ node }) => (
-          <Link key={`${node.title}`} to={`/post/${node.slug}`}>
-            <Card content={node} />
+        {data.allGraphCmsPost.nodes.map((post) => (
+          // console.log(post.id)
+          <Link key={post.title} to={`/posts/${post.slug}`}>
+            <Card content={post} />
           </Link>
         ))}
       </section>
-      <ContentInfo/>
+      <ContentInfo />
     </>
   )
 }
 
 export default Index
+
+
+export  const data = graphql`
+     {
+      allGraphCmsPost(sort: {fields: date, order: DESC}) {
+          nodes {
+            id
+            title
+            tags
+            slug
+            excerpt
+        }
+      }
+    }
+  `
