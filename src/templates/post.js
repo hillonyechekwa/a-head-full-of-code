@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
+import {GatsbyImage} from 'gatsby-plugin-image'
 
 const PostTemplate = ({data, pageContext}) => {
     
@@ -11,15 +11,26 @@ const PostTemplate = ({data, pageContext}) => {
     console.log(pageContext)
 
     return (
-        <section>
+        <section className="post-wrapper">
             <header className="post-header">
+                <section>
+                    <Link className="back-btn" to="/">
+                        <FontAwesomeIcon icon={faArrowLeft} size="sm" />
+                        back to blog
+                    </Link>
+                    <p className="tags">
+                    {
+                        data.graphCmsPost.tags && data.graphCmsPost.tags.join(" ").toLowerCase()
+                        }
+                    </p>
                 <h1>{data.graphCmsPost.title}</h1>
-
-                <p>{data.graphCmsPost.date}</p>
+                        <section className="bottom-data">
+                <p className="pub-date">Published: {data.graphCmsPost.date}</p>
+                <section className="next-prev" >
                 {
                     pageContext.nextPost ? (
                 <Link to={`/posts/${pageContext.nextPost.slug}`}>
-                    <p>next post</p>
+                    <p>Next Post</p>
                     <p>{pageContext.nextPost.title}</p>
                 </Link>
                     ) : null
@@ -27,18 +38,17 @@ const PostTemplate = ({data, pageContext}) => {
                 {
                     pageContext.previousPost ? (
                 <Link to={`/posts/${pageContext.previousPost.slug}`}>
-                    <p>previous post</p>
+                    <p>Previous Post</p>
                     <p>{pageContext.previousPost.title}</p>
                 </Link>
                     ): null
                 }
-               
-                <Link to="/">
-                    <FontAwesomeIcon icon={faArrowLeft} size="sm" />
-                    back to blog
-                </Link>
+               </section>
+                </section>
+                </section>
+                <GatsbyImage image={data.graphCmsPost.coverImage.localFile.childImageSharp.gatsbyImageData} className="post-image" />
             </header>
-            <article>
+            <article className="post-content">
             {
                 data.graphCmsPost.content ? (
                     <MDXRenderer>{data.graphCmsPost.content.markdownNode.childMdx.body}</MDXRenderer>
@@ -53,21 +63,34 @@ export default PostTemplate
 
 
 export const query = graphql`
-  query($slug: String) {
-    graphCmsPost(slug: { eq: $slug }) {
-      id
-      title
-      date
-      content {
-        markdownNode {
-          childMdx {
-            body
-          }
+  query ($slug: String) {
+  graphCmsPost(slug: {eq: $slug}) {
+    id
+    title
+    date
+    tags
+    content {
+      markdownNode {
+        childMdx {
+          body
+        }
+      }
+    }
+    coverImage {
+      localFile {
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: TRACED_SVG
+            layout: FULL_WIDTH
+            formats: WEBP
+          )
         }
       }
     }
   }
+}
 `
+
 
 
 

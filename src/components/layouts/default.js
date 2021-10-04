@@ -1,8 +1,17 @@
 import React from 'react';
-import Nav from '../navigation'
-import '../../styles/index.scss'
+import Nav from '../navigation';
+import '../../styles/index.scss';
+import Background from '../../images/bg3.png'
 
-const Default = ({children}) => {
+const Default = ({ children }) => {
+
+    // const backgroundStyles = {
+    //     backgroundImage: `url(${Background})`,
+    //     backgroundPosition: "center",
+    //     backgroundRepeat: "repeat",
+    //     backgroundSize: "cover",
+    // }
+
     return (
         <div className="layout-wrapper">
             <Nav/>

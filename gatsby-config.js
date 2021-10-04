@@ -1,8 +1,11 @@
+
 /**
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
+
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 })
@@ -11,8 +14,8 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `A Headfull Of Code`,
-    description: `A Web Development blog`,
+    title: `Code bits and choc-chips`,
+    description: `Code bits and choc-chips is a web development blog focused on articles about modern web technologies that include JavaScript, React, GraphQl, Serverless and JAMstack. `,
     editor: `Hill Onyechekwa`,
     socials: {
       twitter: `https://twitter.com/thegridsmith`,
@@ -41,8 +44,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/assets`,
-      }
+        path:`${__dirname}/src/images/` 
+      },
     },
     {
       resolve: `gatsby-plugin-layout`,
@@ -54,7 +57,8 @@ module.exports = {
       resolve: 'gatsby-source-graphcms',
       options: {
         endpoint: process.env.GRAPHCMS_ENDPOINT,
-        buildMarkdownNodes: true
+        buildMarkdownNodes: true,
+        downloadLocalImages: true,
       },
     },
     {

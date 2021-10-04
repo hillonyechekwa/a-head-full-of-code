@@ -44,4 +44,21 @@
 }
 
 
+.layout-wrapper::before{
+    content: "";
+    height: 100%;
+    background-image: url('../images/bg3.png');
+    background-size: contain;
+    background-position: cover;
+    background-clip: border-box;
+    background-repeat: repeat-y;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.15;
+    z-index: 1;
+}
+
 

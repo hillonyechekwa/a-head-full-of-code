@@ -4,21 +4,17 @@ import Card from "../components/card"
 import { graphql, Link } from "gatsby"
 import ContentInfo from "../components/contentinfo"
 
-
 const Index = (props) => {
   const {data} = props
   const allPosts = data.allGraphCmsPost.nodes
-  console.log('allPosts', allPosts) //get the current value of allPosts
   const emptyQuery = ""
   const [searchChange, setSearchChange] = useState({
     filterdData: [],
     query: emptyQuery,
   })
 
-  console.log('searchChange', searchChange)// find the current value of searchChange
 
   const handleInputChange = event => {
-    console.log(event.target.value)
     const query = event.target.value
     const { data } = props
     // didn't destructure data from props
@@ -26,7 +22,6 @@ const Index = (props) => {
 
     //get all posts
     const posts = data.allGraphCmsPost.nodes || []
-    console.log("posts", posts)
     //return all filtered posts
     const filteredData = posts.filter(post => {
       //destructure data from post fontmatter
@@ -51,7 +46,6 @@ const Index = (props) => {
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts = hasSearchResults ? filteredData : allPosts
 
-  // console.log(handleInputChange)
 
   return (
     <>
@@ -80,6 +74,18 @@ export const data = graphql`
         tags
         slug
         excerpt
+        coverImage {
+          localFile {
+          childImageSharp {
+            gatsbyImageData(
+              width: 150
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+              formats: WEBP
+            )
+          }
+        }
+        }
       }
     }
   }

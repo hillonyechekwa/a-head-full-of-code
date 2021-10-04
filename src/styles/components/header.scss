@@ -6,9 +6,16 @@
     justify-content: space-evenly;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px; //fix this later
+    grid-gap: 15px; //fix this later
+    margin-bottom: 100px;
     position: relative;
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+
+.hero-description{
+    // inline-size: 400px;
+    line-height: 3rem;
 }

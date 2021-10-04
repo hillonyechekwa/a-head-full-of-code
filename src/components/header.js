@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import SearchBar from '../components/searchbar'
-import { Link } from 'gatsby';
 
 const Header = (props) => {
   const herodata = useStaticQuery(graphql`
@@ -21,7 +20,10 @@ const Header = (props) => {
   return (
     <header className="hero">
       <h1>{title}</h1>
-      <p className="text1">{description}</p>
+      <h4 className="sub2 hero-description">{description}</h4>
+      {/* {
+        tags && tags.join(" ")
+      } */}
       <SearchBar inputChange={props.inputChange}/>
     </header>
   )
