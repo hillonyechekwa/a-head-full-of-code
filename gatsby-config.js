@@ -74,6 +74,20 @@ module.exports = {
           families: ['Josefin Sans']
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Code Bits And Choc Chips",
+        short_name: "CBACC",
+        description: "A webdevelopment blog with sweet tasting articles and tips",
+        start_url: "/",
+        background_color: "#f07f7f",
+        theme_color: "#574342",
+        display: "standalone",
+        icon:`src/images/icon.png`,
+        crossOrigin: "use-credentials"
+      }
     }
   ],
 }

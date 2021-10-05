@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../navigation';
 import '../../styles/index.scss';
-import Background from '../../images/bg3.png'
+
 
 const Default = ({ children }) => {
 
