@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
+import Logo from '../images/logo.svg';
 
 
 const Navigation = () => {
@@ -24,6 +25,9 @@ const Navigation = () => {
 
   return (
     <nav className="nav">
+      <Link to="/">
+        <img className="site-logo" src={Logo} alt="logo"/>
+      </Link>
       <ul>
         <li>
           <Link className="nav-links" to="/">Home</Link>
