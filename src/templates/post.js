@@ -3,15 +3,19 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import {GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { Helmet } from 'react-helmet';
 
 const PostTemplate = ({data, pageContext}) => {
     
-    console.log('data', data)
-    console.log(pageContext)
 
     return (
-        <section className="post-wrapper">
+      <section className="post-wrapper">
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>{data.site.siteMetadata.title}</title>
+                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+            </Helmet>
             <header className="post-header">
                 <section>
                     <Link className="back-btn" to="/">
@@ -63,32 +67,39 @@ export default PostTemplate
 
 
 export const query = graphql`
-  query ($slug: String) {
-  graphCmsPost(slug: {eq: $slug}) {
-    id
-    title
-    date
-    tags
-    content {
-      markdownNode {
-        childMdx {
-          body
+  query($slug: String) {
+    graphCmsPost(slug: { eq: $slug }) {
+      id
+      title
+      date
+      tags
+      content {
+        markdownNode {
+          childMdx {
+            body
+          }
+        }
+      }
+      coverImage {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: TRACED_SVG
+              layout: FULL_WIDTH
+              formats: WEBP
+            )
+          }
         }
       }
     }
-    coverImage {
-      localFile {
-        childImageSharp {
-          gatsbyImageData(
-            placeholder: TRACED_SVG
-            layout: FULL_WIDTH
-            formats: WEBP
-          )
-        }
+    site {
+      siteMetadata {
+        title
+        description
+        tags
       }
     }
   }
-}
 `
 
 

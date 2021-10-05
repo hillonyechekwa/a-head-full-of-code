@@ -4,7 +4,7 @@ import SearchBar from '../components/searchbar'
 
 const Header = (props) => {
   const herodata = useStaticQuery(graphql`
-    query MyQuery {
+    query HeroQuery {
       site {
         siteMetadata {
           title
